@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" />
     <style>
         /* Estilos para o modal */
         .modal {
@@ -64,115 +64,130 @@
         <!-- Intro -->
         <section id="intro" class="wrapper style1 fullscreen fade-up">
             <div class="inner">
-                <h1>Hyperspace</h1>
-                <p>Just another fine responsive site template designed by <a href="http://html5up.net">HTML5 UP</a><br />
-                and released for free under the <a href="http://html5up.net/license">Creative Commons</a>.</p>
-                <ul class="actions">
-                    <li><a href="#one" class="button scrolly">Learn more</a></li>
-                </ul>
+                <h1>Luiz Fumes</h1>
+                <p>Engenheiro de Software | Coordenador de Engenharia</p>
                 <button id="myBtn">Quero que você me apresente</button>
                 <button id="singBtn">Quero que você cante seu currículo</button>
             </div>
         </section>
 
-        <!-- One -->
-        <section id="one" class="wrapper style2 spotlights">
-            <section>
-                <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
-                <div class="content">
-                    <div class="inner">
-                        <h2>Sed ipsum dolor</h2>
-                        <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-                        <ul class="actions">
-                            <li><a href="generic.html" class="button">Learn more</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
-                <div class="content">
-                    <div class="inner">
-                        <h2>Feugiat consequat</h2>
-                        <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-                        <ul class="actions">
-                            <li><a href="generic.html" class="button">Learn more</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+        <!-- Currículo -->
+        <section id="curriculum" class="wrapper style2 fade-up">
+            <div class="inner">
+                <h2>Sobre Mim</h2>
+                <p>Engenheiro de Software com 14 anos de experiência, apaixonado por tecnologia e inovação. Experiência em diversas linguagens de programação e metodologias ágeis.</p>
+                
+                <h2>Experiência Profissional</h2>
+                <ul>
+                    <li><strong>ESCALE</strong> - Manager de Dados, Engenharia e DevOps, liderando até 16 pessoas simultaneamente.</li>
+                    <li><strong>Gshield</strong> - Otimização de sistemas, melhoria de projetos internos para RH.</li>
+                    <li><strong>Global Fashion Group</strong> - Desenvolvimento backend e frontend.</li>
+                    <li><strong>Dafiti, Tricae, Kanui</strong> - Inovação em e-commerce.</li>
+                    <li><strong>JáCotei e Systax</strong> - Análise de sistemas e desenvolvimento.</li>
+                    <li><strong>Catho</strong> - Coordenador de Engenharia, atingindo diversas metas.</li>
+                    <li><strong>Freelancer na França</strong> - Criação de sistemas personalizados.</li>
+                    <li><strong>Webtask</strong> - Co-owner e desenvolvimento de e-commerce.</li>
+                    <li><strong>HelpDesk</strong> - Programador de sistemas de suporte.</li>
+                </ul>
 
-            <!-- Modal para apresentação -->
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <video width="100%" controls>
-                        <source src="path/to/your/video.mp4" type="video/mp4">
-                        Seu navegador não suporta o elemento de vídeo.
-                    </video>
-                </div>
+                <h2>Formação Acadêmica</h2>
+                <p><strong>UNIP</strong> - Bacharelado em Ciência da Computação</p>
+
+                <h2>Principais Competências</h2>
+                <ul>
+                    <li>Node.js</li>
+                    <li>CI/CD</li>
+                    <li>Desenvolvimento de software</li>
+                </ul>
+
+                <h2>Contato</h2>
+                <ul>
+                    <li>Telefone: 14 9 9653 0908 (Mobile)</li>
+                    <li>Email: luizcsfumes@gmail.com</li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/luizfumes">luizfumes</a></li>
+                </ul>
             </div>
-
-            <!-- Modal para música -->
-            <div id="singModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <audio controls>
-                        <source src="path/to/your/song.mp3" type="audio/mpeg">
-                        Seu navegador não suporta o elemento de áudio.
-                    </audio>
-                </div>
-            </div>
-
         </section>
 
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script>
-            // Pega os modais
-            var modal = document.getElementById("myModal");
-            var singModal = document.getElementById("singModal");
-
-            // Pega os botões que abrem os modais
-            var btn = document.getElementById("myBtn");
-            var singBtn = document.getElementById("singBtn");
-
-            // Pega os elementos <span> que fecham os modais
-            var span = document.getElementsByClassName("close");
-
-            // Quando o usuário clicar no botão, abre o modal
-            btn.onclick = function() {
-                modal.style.display = "block";
-            }
-
-            singBtn.onclick = function() {
-                singModal.style.display = "block";
-            }
-
-            // Quando o usuário clicar em <span> (x), fecha o modal
-            for(var i = 0; i < span.length; i++) {
-                span[i].onclick = function() {
-                    this.parentElement.parentElement.style.display = "none";
-                }
-            }
-
-            // Quando o usuário clicar fora do modal, fecha o modal
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-                if (event.target == singModal) {
-                    singModal.style.display = "none";
-                }
-            }
-        </script>
+        <!-- Footer -->
+        <footer id="footer" class="wrapper style1-alt">
+            <div class="inner">
+                <ul class="menu">
+                    <li>&copy; Luiz Fumes. Todos os direitos reservados.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
 
     </div>
+
+    <!-- Modal para apresentação -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <video width="100%" controls>
+                <source src="path/to/your/video.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </div>
+    </div>
+
+    <!-- Modal para música -->
+    <div id="singModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <audio controls>
+                <source src="path/to/your/song.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Pega os modais
+        var modal = document.getElementById("myModal");
+        var singModal = document.getElementById("singModal");
+
+        // Pega os botões que abrem os modais
+        var btn = document.getElementById("myBtn");
+        var singBtn = document.getElementById("singBtn");
+
+        // Pega os elementos <span> que fecham os modais
+        var span = document.getElementsByClassName("close");
+
+        // Quando o usuário clicar no botão, abre o modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        singBtn.onclick = function() {
+            singModal.style.display = "block";
+        }
+
+        // Quando o usuário clicar em <span> (x), fecha o modal
+        for(var i = 0; i < span.length; i++) {
+            span[i].onclick = function() {
+                this.parentElement.parentElement.style.display = "none";
+            }
+        }
+
+        // Quando o usuário clicar fora do modal, fecha o modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            if (event.target == singModal) {
+                singModal.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>
