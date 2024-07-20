@@ -17,16 +17,18 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.4);
+            background-color: rgba(0, 0, 0, 0.4);
             padding-top: 60px;
         }
         .modal-content {
             background-color: #fefefe;
-            margin: 5% auto;
+            margin: auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 80%;
+            width: 60%; /* Ajuste para formato 9:16 */
+            max-width: 540px; /* Máxima largura para manter o aspecto 9:16 */
+            aspect-ratio: 9 / 16;
+            animation: slide-in-left 0.5s forwards;
         }
         .close {
             color: #aaa;
@@ -39,6 +41,14 @@
             color: black;
             text-decoration: none;
             cursor: pointer;
+        }
+        @keyframes slide-in-left {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
         }
     </style>
 </head>
@@ -111,9 +121,9 @@
                     <li><strong>Gshield</strong> - Otimização de sistemas, melhoria de projetos internos para RH.</li>
                     <li><strong>Global Fashion Group</strong> - Desenvolvimento backend e frontend.</li>
                     <li><strong>Dafiti, Tricae, Kanui</strong> - Inovação em e-commerce.</li>
-                    <li><strong>JáCotei e Systax</strong> - Análise de sistemas e desenvolvimento.</li>
+                    <li><strong>JáCotei e Systax</strong> - Análise de sistemas e desenvolvimento de soluções customizadas para clientes, focando em sistemas de comparação de preços e compliance fiscal.</li>
                     <li><strong>Catho</strong> - Coordenador de Engenharia, atingindo diversas metas.</li>
-                    <li><strong>Freelancer na França</strong> - Criação de sistemas personalizados.</li>
+                    <li><strong>Freelancer na França</strong> - Criação de sistemas personalizados para diversas empresas, adaptando soluções tecnológicas às necessidades específicas de cada cliente.</li>
                     <li><strong>Webtask</strong> - Co-owner e desenvolvimento de e-commerce.</li>
                     <li><strong>HelpDesk</strong> - Programador de sistemas de suporte.</li>
                 </ul>
@@ -186,7 +196,7 @@
                                     <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
                                     <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
                                     <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</```html
                                     <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
                                 </ul>
                             </li>
@@ -202,21 +212,17 @@
     <footer id="footer" class="wrapper style1-alt">
         <div class="inner">
             <ul class="menu">
-                <li>&copy; Luiz Fumes. Todos os direitos reservados.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></liContinuando a partir da última seção do `index.html`:
-
-```html
-                </ul>
-            </div>
-        </footer>
-
-    </div>
+                <li>&copy; Luiz Fumes. Todos os direitos reservados.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </footer>
 
     <!-- Modal para apresentação -->
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <video width="100%" controls>
-                <source src="path/to/your/video.mp4" type="video/mp4">
+                <source src="path/to/your/presentation-video.mp4" type="video/mp4">
                 Seu navegador não suporta o elemento de vídeo.
             </video>
         </div>
@@ -226,10 +232,10 @@
     <div id="singModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <audio controls>
-                <source src="path/to/your/song.mp3" type="audio/mpeg">
-                Seu navegador não suporta o elemento de áudio.
-            </audio>
+            <video width="100%" controls>
+                <source src="path/to/your/song-video.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
         </div>
     </div>
 
