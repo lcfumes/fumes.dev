@@ -22,7 +22,8 @@
         }
         .modal-content {
             background-color: #fefefe;
-            margin: auto;
+            position: absolute;
+            left: 0;
             padding: 20px;
             border: 1px solid #888;
             width: 60%; /* Ajuste para formato 9:16 */
@@ -44,7 +45,7 @@
         }
         @keyframes slide-in-left {
             from {
-                transform: translateX(-100%);
+                transform: translateX(100%);
             }
             to {
                 transform: translateX(0);
@@ -222,7 +223,7 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <video width="100%" controls>
-                <source src="path/to/your/presentation-video.mp4" type="video/mp4">
+                <source src="https://youtu.be/O53g5UvuDbg" type="video/mp4">
                 Seu navegador não suporta o elemento de vídeo.
             </video>
         </div>
@@ -233,7 +234,7 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <video width="100%" controls>
-                <source src="path/to/your/song-video.mp4" type="video/mp4">
+                <source src="https://youtu.be/N5DQmsWCu48" type="video/mp4">
                 Seu navegador não suporta o elemento de vídeo.
             </video>
         </div>
