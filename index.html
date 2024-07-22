@@ -23,8 +23,7 @@
         .modal-content {
             background-color: #fefefe;
             position: absolute;
-            left: 0;
-            top: 0;
+            right: 0;
             padding: 20px;
             border: 1px solid #888;
             width: 60%; /* Ajuste para formato 9:16 */
@@ -223,10 +222,7 @@
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <video width="100%" controls>
-                <source src="https://www.youtube.com/embed/O53g5UvuDbg" type="video/mp4">
-                Seu navegador não suporta o elemento de vídeo.
-            </video>
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/O53g5UvuDbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -234,58 +230,50 @@
     <div id="singModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <video width="100%" controls>
-                <source src="https://www.youtube.com/embed/N5DQmsWCu48" type="video/mp4">
-                Seu navegador não suporta o elemento de vídeo.
-            </video>
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/N5DQmsWCu48" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // Pega os modais
-        var modal = document.getElementById("myModal");
-        var singModal = document.getElementById("singModal");
+        $(document).ready(function() {
+            // Pega os modais
+            var modal = $("#myModal");
+            var singModal = $("#singModal");
 
-        // Pega os botões que abrem os modais
-        var btn = document.getElementById("myBtn");
-        var singBtn = document.getElementById("singBtn");
+            // Pega os botões que abrem os modais
+            var btn = $("#myBtn");
+            var singBtn = $("#singBtn");
 
-        // Pega os elementos <span> que fecham os modais
-        var span = document.getElementsByClassName("close");
+            // Quando o usuário clicar no botão, abre o modal
+            btn.click(function() {
+                modal.show();
+            });
 
-        // Quando o usuário clicar no botão, abre o modal
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
+            singBtn.click(function() {
+                singModal.show();
+            });
 
-        singBtn.onclick = function() {
-            singModal.style.display = "block";
-        }
+            // Quando o usuário clicar em <span> (x), fecha o modal e para o vídeo
+            $(".close").click(function() {
+                var modalToClose = $(this).closest(".modal");
+                modalToClose.hide();
+                modalToClose.find("iframe").attr("src", modalToClose.find("iframe").attr("src"));
+            });
 
-        // Quando o usuário clicar em <span> (x), fecha o modal
-        for(var i = 0; i < span.length; i++) {
-            span[i].onclick = function() {
-                this.parentElement.parentElement.style.display = "none";
-            }
-        }
-
-        // Quando o usuário clicar fora do modal, fecha o modal
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-            if (event.target == singModal) {
-                singModal.style.display = "none";
-            }
-        }
+            // Quando o usuário clicar fora do modal, fecha o modal e para o vídeo
+            $(window).click(function(event) {
+                if ($(event.target).is(modal)) {
+                    modal.hide();
+                    modal.find("iframe").attr("src", modal.find("iframe").attr("src"));
+                }
+                if ($(event.target).is(singModal)) {
+                    singModal.hide();
+                    singModal.find("iframe").attr("src", singModal.find("iframe").attr("src"));
+                }
+            });
+        });
     </script>
 
 </body>
