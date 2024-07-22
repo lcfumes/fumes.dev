@@ -39,15 +39,49 @@
             flex: 2;
             padding: 20px;
         }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
         .modal-content {
             background-color: #fefefe;
+            position: fixed;
+            right: 0;
             padding: 20px;
             border: 1px solid #888;
+            width: 60%; /* Ajuste para formato 9:16 */
+            max-width: 540px; /* Máxima largura para manter o aspecto 9:16 */
+            aspect-ratio: 9 / 16;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            animation: slide-in-right 0.5s forwards;
         }
         .close {
             color: #aaa;
+            float: right;
             font-size: 28px;
             font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        @keyframes slide-in-right {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
         }
     </style>
 </head>
