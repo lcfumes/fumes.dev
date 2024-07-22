@@ -1,1 +1,362 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Luiz Fumes - Engenheiro de Software</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Estilos para a seção "Quem sou eu" */
+        .wrapper.style2 {
+            background-color: #2b2d42;
+            color: #fff;
+            padding: 4em 0;
+        }
 
+        .wrapper.style2 .spotlights {
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
+
+        .wrapper.style2 .spotlights section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .wrapper.style2 .spotlights .image {
+            flex: 1;
+        }
+
+        .wrapper.style2 .spotlights .content {
+            flex: 2;
+            padding: 2em;
+        }
+
+        .wrapper.style2 .spotlights .content .inner {
+            padding: 2em;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+
+        .wrapper.style2 .spotlights .content h2 {
+            color: #f72585;
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+
+        .wrapper.style2 .spotlights .content p,
+        .wrapper.style2 .spotlights .content ul {
+            color: #fff;
+            font-size: 1.1em;
+        }
+
+        .wrapper.style2 .spotlights .content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .wrapper.style2 .spotlights .content ul li {
+            margin-bottom: 0.5em;
+        }
+
+        .wrapper.style2 .spotlights .content ul li strong {
+            color: #ffba08;
+        }
+
+        .wrapper.style2 .spotlights .content ul li ul {
+            margin-top: 0.5em;
+            margin-left: 1em;
+        }
+
+        .wrapper.style2 .spotlights .content ul li ul li {
+            margin-bottom: 0.3em;
+        }
+
+        /* Estilos para o modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            position: absolute;
+            left: 0;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%; /* Ajuste para formato 9:16 */
+            max-width: 540px; /* Máxima largura para manter o aspecto 9:16 */
+            aspect-ratio: 9 / 16;
+            animation: slide-in-right 0.5s forwards;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        @keyframes slide-in-right {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+    <!-- Sidebar -->
+    <section id="sidebar">
+        <div class="inner">
+            <nav>
+                <ul>
+                    <li><a href="#intro">Welcome</a></li>
+                    <li><a href="#about">Quem sou eu</a></li>
+                    <li><a href="#curriculum">Currículo</a></li>
+                    <li><a href="#education">Formação Acadêmica</a></li>
+                    <li><a href="#skills">Principais Competências</a></li>
+                    <li><a href="#contact">Get in touch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Intro -->
+        <section id="intro" class="wrapper style1 fullscreen fade-up">
+            <div class="inner">
+                <h1>Luiz Fumes</h1>
+                <p>Engenheiro de Software | Coordenador de Engenharia</p>
+                <button id="myBtn">Quero que você me apresente</button>
+                <button id="singBtn">Quero que você cante seu currículo</button>
+            </div>
+        </section>
+
+        <!-- Quem sou eu -->
+        <section id="about" class="wrapper style2 spotlights">
+            <section>
+                <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Luiz Fumes - Engenheiro de Software</h2>
+                        <p>Sempre fui apaixonado por tecnologia. Com 14 anos de experiência em desenvolvimento e engenharia web, já programei em PHP, JavaScript, Java e Golang, e trabalhei com diversos tipos de bancos de dados, tanto relacionais quanto não relacionais.</p>
+                        <p>Contato:<br>
+                        Telefone: 14 9 9653 0908 (Mobile)<br>
+                        Email: <a href="mailto:luizcsfumes@gmail.com">luizcsfumes@gmail.com</a><br>
+                        LinkedIn: <a href="https://www.linkedin.com/in/luizfumes">luizfumes</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Currículo -->
+        <section id="curriculum" class="wrapper style2 spotlights">
+            <section>
+                <a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Experiência Profissional</h2>
+                        <ul>
+                            <li><strong>Gshield</strong> - Engenheiro de Software (novembro de 2023 - julho de 2024)</li>
+                            <li><strong>ESCALE</strong>
+                                <ul>
+                                    <li>Data Engineer Manager (novembro de 2022 - outubro de 2023)</li>
+                                    <li>Engineering Manager (setembro de 2020 - outubro de 2023)</li>
+                                    <li>Tech Lead (abril de 2018 - setembro de 2020)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Global Fashion Group</strong> - Desenvolvedor (janeiro de 2016 - abril de 2018)</li>
+                            <li><strong>Dafiti</strong> - Programador Pleno PHP (maio de 2015 - janeiro de 2016)</li>
+                            <li><strong>JáCotei</strong> - Analista Programador PHP (maio de 2013 - maio de 2015)</li>
+                            <li><strong>Systax</strong> - Analista Programador PHP (março de 2013 - maio de 2013)</li>
+                            <li><strong>Freelancer</strong> (junho de 2012 - fevereiro de 2013)</li>
+                            <li><strong>Catho Online</strong> - Coordenador Técnico e Analista Programador (setembro de 2008 - junho de 2012)</li>
+                            <li><strong>Webtask Websolution</strong> - Co-Owner / Websolution (fevereiro de 2007 - setembro de 2008)</li>
+                            <li><strong>HelpDesk</strong> - Programador (julho de 2005 - fevereiro de 2007)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Formação Acadêmica -->
+        <section id="education" class="wrapper style2 spotlights">
+            <section>
+                <a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="center center" /></a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Formação Acadêmica</h2>
+                        <p><strong>UNIP</strong> - Bacharelado em Ciência da Computação (2002 - 2005)</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Principais Competências -->
+        <section id="skills" class="wrapper style2 spotlights">
+            <section>
+                <a href="#" class="image"><img src="images/pic04.jpg" alt="" data-position="center center" /></a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Principais Competências</h2>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>CI/CD</li>
+                            <li>Desenvolvimento de software</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="wrapper style3 fade-up">
+            <div class="inner">
+                <h2>Get in touch</h2>
+                <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+                <div class="split style1">
+                    <section>
+                        <form method="post" action="#">
+                            <div class="fields">
+                                <div class="field half">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" />
+                                </div>
+                                <div class="field half">
+                                    <label for="email">Email</label>
+                                    <input type="text" name="email" id="email" />
+                                </div>
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <ul class="actions">
+                                <li><a href="" class="button submit">Send Message</a></li>
+                            </ul>
+                        </form>
+                    </section>
+                    <section>
+                        <ul class="contact">
+                            <li>
+                                <h3>Address</h3>
+                                <span>12345 Somewhere Road #654<br />
+                                Nashville, TN 00000-0000<br />
+                                USA</span>
+                            </li>
+                            <li>
+                                <h3>Email</h3>
+                                <a href="#">user@untitled.tld</a>
+                            </li>
+                            <li>
+                                <h3>Phone</h3>
+                                <span>(000) 000-0000</span>
+                            </li>
+                            <li>
+                                <h3>Social</h3>
+                                <ul class="icons">
+                                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                    <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                    <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper style1-alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; Luiz Fumes. Todos os direitos reservados.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Modal para apresentação -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/O53g5UvuDbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal para música -->
+    <div id="singModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/N5DQmsWCu48" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Pega os modais
+            var modal = $("#myModal");
+            var singModal = $("#singModal");
+
+            // Pega os botões que abrem os modais
+            var btn = $("#myBtn");
+            var singBtn = $("#singBtn");
+
+            // Quando o usuário clicar no botão, abre o modal
+            btn.click(function() {
+                modal.show();
+            });
+
+            singBtn.click(function() {
+                singModal.show();
+            });
+
+            // Quando o usuário clicar em <span> (x), fecha o modal e para o vídeo
+            $(".close").click(function() {
+                var modalToClose = $(this).closest(".modal");
+                modalToClose.hide();
+                modalToClose.find("iframe").attr("src", modalToClose.find("iframe").attr("src"));
+            });
+
+            // Quando o usuário clicar fora do modal, fecha o modal e para o vídeo
+            $(window).click(function(event) {
+                if ($(event.target).is(modal)) {
+                    modal.hide();
+                    modal.find("iframe").attr("src", modal.find("iframe").attr("src"));
+                }
+                if ($(event.target).is(singModal)) {
+                    singModal.hide();
+                    singModal.find("iframe").attr("src", singModal.find("iframe").attr("src"));
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
