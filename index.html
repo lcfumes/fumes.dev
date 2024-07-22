@@ -7,37 +7,8 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        /* Estilos inline básicos */
         body {
-            background-color: #2b2d42;
-            color: #fff;
             font-family: Arial, sans-serif;
-        }
-        .wrapper {
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #f72585;
-        }
-        a {
-            color: #ffba08;
-        }
-        .spotlights {
-            display: flex;
-            flex-direction: column;
-            gap: 2em;
-        }
-        .spotlights section {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-        .spotlights .image {
-            flex: 1;
-        }
-        .spotlights .content {
-            flex: 2;
-            padding: 20px;
         }
         .modal {
             display: none;
@@ -49,7 +20,6 @@
             height: 100%;
             overflow: auto;
             background-color: rgba(0, 0, 0, 0.4);
-            padding-top: 60px;
         }
         .modal-content {
             background-color: #fefefe;
@@ -57,8 +27,8 @@
             right: 0;
             padding: 20px;
             border: 1px solid #888;
-            width: 60%; /* Ajuste para formato 9:16 */
-            max-width: 540px; /* Máxima largura para manter o aspecto 9:16 */
+            width: 60%;
+            max-width: 540px;
             aspect-ratio: 9 / 16;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             animation: slide-in-right 0.5s forwards;
@@ -85,7 +55,7 @@
         }
     </style>
 </head>
-<body>
+<body class="is-preload">
 
     <!-- Sidebar -->
     <section id="sidebar">
@@ -111,16 +81,16 @@
             <div class="inner">
                 <h1>Luiz Fumes</h1>
                 <p>Engenheiro de Software | Coordenador de Engenharia</p>
-                <button id="myBtn" style="color: #fff; background-color: #000;">Quero que você me apresente</button>
-                <button id="singBtn" style="color: #fff; background-color: #000;">Quero que você cante seu currículo</button>
+                <button id="myBtn">Quero que você me apresente</button>
+                <button id="singBtn">Quero que você cante seu currículo</button>
             </div>
         </section>
 
         <!-- Quem sou eu -->
-        <section id="about" class="wrapper style2 spotlights" style="background-color: #000; padding: 20px;">
-            <section style="background-color: #444; padding: 20px;">
-                <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" style="max-width: 100%;" /></a>
-                <div class="content" style="color: #fff;">
+        <section id="about" class="wrapper style2 spotlights">
+            <section>
+                <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+                <div class="content">
                     <div class="inner">
                         <h2>Quem sou eu</h2>
                         <p>Sempre fui apaixonado por tecnologia. Com 14 anos de experiência em desenvolvimento e engenharia web, já programei em PHP, JavaScript, Java e Golang, e trabalhei com diversos tipos de bancos de dados, tanto relacionais quanto não relacionais.</p>
@@ -135,10 +105,10 @@
         </section>
 
         <!-- Currículo -->
-        <section id="curriculum" class="wrapper style2 spotlights" style="background-color: #000; padding: 20px;">
-            <section style="background-color: #444; padding: 20px;">
-                <a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" style="max-width: 100%;" /></a>
-                <div class="content" style="color: #fff;">
+        <section id="curriculum" class="wrapper style2 spotlights">
+            <section>
+                <a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+                <div class="content">
                     <div class="inner">
                         <h2>Currículo</h2>
                         <ul>
@@ -165,10 +135,10 @@
         </section>
 
         <!-- Formação Acadêmica -->
-        <section id="education" class="wrapper style2 spotlights" style="background-color: #000; padding: 20px;">
-            <section style="background-color: #444; padding: 20px;">
-                <a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="center center" style="max-width: 100%;" /></a>
-                <div class="content" style="color: #fff;">
+        <section id="education" class="wrapper style2 spotlights">
+            <section>
+                <a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="center center" /></a>
+                <div class="content">
                     <div class="inner">
                         <h2>Formação Acadêmica</h2>
                         <p><strong>UNIP</strong> - Bacharelado em Ciência da Computação (2002 - 2005)</p>
@@ -178,10 +148,10 @@
         </section>
 
         <!-- Principais Competências -->
-        <section id="skills" class="wrapper style2 spotlights" style="background-color: #000; padding: 20px;">
-            <section style="background-color: #444; padding: 20px;">
-                <a href="#" class="image"><img src="images/pic04.jpg" alt="" data-position="center center" style="max-width: 100%;" /></a>
-                <div class="content" style="color: #fff;">
+        <section id="skills" class="wrapper style2 spotlights">
+            <section>
+                <a href="#" class="image"><img src="images/pic04.jpg" alt="" data-position="center center" /></a>
+                <div class="content">
                     <div class="inner">
                         <h2>Principais Competências</h2>
                         <ul>
@@ -195,8 +165,8 @@
         </section>
 
         <!-- Contact -->
-        <section id="contact" class="wrapper style3 fade-up" style="background-color: #222; padding: 20px;">
-            <div class="inner" style="color: #fff;">
+        <section id="contact" class="wrapper style3 fade-up">
+            <div class="inner">
                 <h2>Get in touch</h2>
                 <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
                 <div class="split style1">
@@ -284,6 +254,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
+            // Remove a classe is-preload após o carregamento da página
+            $('body').removeClass('is-preload');
+
             // Pega os modais
             var modal = $("#myModal");
             var singModal = $("#singModal");
