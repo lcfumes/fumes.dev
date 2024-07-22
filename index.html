@@ -83,8 +83,8 @@
             <div class="inner">
                 <h1>Luiz Fumes</h1>
                 <p>Engenheiro de Software | Coordenador de Engenharia</p>
-                <button id="myBtn" style="color: #fff; background-color: #000;">Quero que você me apresente</button>
-                <button id="singBtn" style="color: #fff; background-color: #000;">Quero que você cante seu currículo</button>
+                <button id="myBtn">Quero que você me apresente</button>
+                <button id="singBtn">Quero que você cante seu currículo</button>
             </div>
         </section>
 
@@ -240,7 +240,7 @@
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/O53g5UvuDbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="presentationVideo" width="100%" height="100%" src="https://www.youtube.com/embed/O53g5UvuDbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -248,7 +248,7 @@
     <div id="singModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/N5DQmsWCu48" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="songVideo" width="100%" height="100%" src="https://www.youtube.com/embed/N5DQmsWCu48" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -280,18 +280,24 @@
             $(".close").click(function() {
                 var modalToClose = $(this).closest(".modal");
                 modalToClose.hide();
-                modalToClose.find("iframe").attr("src", modalToClose.find("iframe").attr("src"));
+                modalToClose.find("iframe").each(function(){
+                    $(this).attr("src", $(this).attr("src"));
+                });
             });
 
             // Quando o usuário clicar fora do modal, fecha o modal e para o vídeo
             $(window).click(function(event) {
                 if ($(event.target).is(modal)) {
                     modal.hide();
-                    modal.find("iframe").attr("src", modal.find("iframe").attr("src"));
+                    modal.find("iframe").each(function(){
+                        $(this).attr("src", $(this).attr("src"));
+                    });
                 }
                 if ($(event.target).is(singModal)) {
                     singModal.hide();
-                    singModal.find("iframe").attr("src", singModal.find("iframe").attr("src"));
+                    singModal.find("iframe").each(function(){
+                        $(this).attr("src", $(this).attr("src"));
+                    });
                 }
             });
         });
