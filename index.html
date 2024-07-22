@@ -7,12 +7,80 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
+        /* Estilos para a seção "Who we are" */
+        .wrapper.style2 {
+            background-color: #2b2d42;
+            color: #fff;
+            padding: 4em 0;
+        }
+
+        .wrapper.style2 .spotlights {
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
+
+        .wrapper.style2 .spotlights section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .wrapper.style2 .spotlights .image {
+            flex: 1;
+        }
+
+        .wrapper.style2 .spotlights .content {
+            flex: 2;
+            padding: 2em;
+        }
+
+        .wrapper.style2 .spotlights .content .inner {
+            padding: 2em;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+
+        .wrapper.style2 .spotlights .content h2 {
+            color: #f72585;
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+
+        .wrapper.style2 .spotlights .content p,
+        .wrapper.style2 .spotlights .content ul {
+            color: #fff;
+            font-size: 1.1em;
+        }
+
+        .wrapper.style2 .spotlights .content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .wrapper.style2 .spotlights .content ul li {
+            margin-bottom: 0.5em;
+        }
+
+        .wrapper.style2 .spotlights .content ul li strong {
+            color: #ffba08;
+        }
+
+        .wrapper.style2 .spotlights .content ul li ul {
+            margin-top: 0.5em;
+            margin-left: 1em;
+        }
+
+        .wrapper.style2 .spotlights .content ul li ul li {
+            margin-bottom: 0.3em;
+        }
+
         /* Estilos para o modal */
         .modal {
             display: none;
             position: fixed;
             z-index: 1;
-            left: 0;
+            right: 0;
             top: 0;
             width: 100%;
             height: 100%;
@@ -23,7 +91,7 @@
         .modal-content {
             background-color: #fefefe;
             position: absolute;
-            right: 0;
+            left: 0;
             padding: 20px;
             border: 1px solid #888;
             width: 60%; /* Ajuste para formato 9:16 */
@@ -88,11 +156,8 @@
                 <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
                 <div class="content">
                     <div class="inner">
-                        <h2>Sed ipsum dolor</h2>
-                        <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-                        <ul class="actions">
-                            <li><a href="generic.html" class="button">Learn more</a></li>
-                        </ul>
+                        <h2>Luiz Fumes - Engenheiro de Software</h2>
+                        <p>Sempre fui apaixonado por tecnologia. Com 14 anos de experiência em desenvolvimento e engenharia web, já programei em PHP, JavaScript, Java e Golang, e trabalhei com diversos tipos de bancos de dados, tanto relacionais quanto não relacionais.</p>
                     </div>
                 </div>
             </section>
@@ -100,10 +165,24 @@
                 <a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
                 <div class="content">
                     <div class="inner">
-                        <h2>Feugiat consequat</h2>
-                        <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-                        <ul class="actions">
-                            <li><a href="generic.html" class="button">Learn more</a></li>
+                        <h2>Experiência Profissional</h2>
+                        <ul>
+                            <li><strong>Gshield</strong> - Engenheiro de Software (novembro de 2023 - julho de 2024)</li>
+                            <li><strong>ESCALE</strong>
+                                <ul>
+                                    <li>Data Engineer Manager (novembro de 2022 - outubro de 2023)</li>
+                                    <li>Engineering Manager (setembro de 2020 - outubro de 2023)</li>
+                                    <li>Tech Lead (abril de 2018 - setembro de 2020)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Global Fashion Group</strong> - Desenvolvedor (janeiro de 2016 - abril de 2018)</li>
+                            <li><strong>Dafiti</strong> - Programador Pleno PHP (maio de 2015 - janeiro de 2016)</li>
+                            <li><strong>JáCotei</strong> - Analista Programador PHP (maio de 2013 - maio de 2015)</li>
+                            <li><strong>Systax</strong> - Analista Programador PHP (março de 2013 - maio de 2013)</li>
+                            <li><strong>Freelancer</strong> (junho de 2012 - fevereiro de 2013)</li>
+                            <li><strong>Catho Online</strong> - Coordenador Técnico e Analista Programador (setembro de 2008 - junho de 2012)</li>
+                            <li><strong>Webtask Websolution</strong> - Co-Owner / Websolution (fevereiro de 2007 - setembro de 2008)</li>
+                            <li><strong>HelpDesk</strong> - Programador (julho de 2005 - fevereiro de 2007)</li>
                         </ul>
                     </div>
                 </div>
@@ -142,7 +221,7 @@
                 <h2>Contato</h2>
                 <ul>
                     <li>Telefone: 14 9 9653 0908 (Mobile)</li>
-                    <li>Email: luizcsfumes@gmail.com</li>
+                    <li>Email: <a href="mailto:luizcsfumes@gmail.com">luizcsfumes@gmail.com</a></li>
                     <li>LinkedIn: <a href="https://www.linkedin.com/in/luizfumes">luizfumes</a></li>
                 </ul>
             </div>
