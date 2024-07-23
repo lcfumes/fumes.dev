@@ -1,85 +1,61 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <title>Luiz Fumes - Engenheiro de Software</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            color: #333;
-        }
-        .content {
-            padding: 20px;
-            background-color: #fff;
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #007bff;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-        }
-        p, ul {
-            color: #555;
-            line-height: 1.6;
-        }
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 0;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
         .modal {
             display: none;
             position: fixed;
-            z-index: 1;
+            z-index: 999;
+            top: 0;
+            right: -30%;
+            width: 30%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+        }
+
+        .modal-content iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            z-index: 998;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
-            padding-top: 60px;
-        }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 700px;
-            border-radius: 10px;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
+
 <body class="is-preload">
 
     <!-- Sidebar -->
@@ -87,12 +63,10 @@
         <div class="inner">
             <nav>
                 <ul>
-                    <li><a href="#intro">Welcome</a></li>
-                    <li><a href="#about">Quem sou eu</a></li>
-                    <li><a href="#curriculum">Currículo</a></li>
-                    <li><a href="#education">Formação Acadêmica</a></li>
-                    <li><a href="#skills">Principais Competências</a></li>
-                    <li><a href="#contact">Get in touch</a></li>
+                    <li><a href="#intro">Sobre mim</a></li>
+                    <li><a href="#one">Experiência</a></li>
+                    <li><a href="#two">Competências</a></li>
+                    <li><a href="#three">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -105,89 +79,162 @@
         <section id="intro" class="wrapper style1 fullscreen fade-up">
             <div class="inner">
                 <h1>Luiz Fumes</h1>
-                <p>Engenheiro de Software | Coordenador de Engenharia</p>
-                <a href="#" id="myBtn" class="button">Quero que você me apresente</a>
-                <a href="#" id="singBtn" class="button">Quero que você cante seu currículo</a>
+                <p>Engenheiro de Software | Coordenador de Engenharia<br>
+                    São Paulo, Brasil</p>
+                <ul class="actions">
+                    <li><a href="#one" class="button scrolly">Saiba mais</a></li>
+                    <li><button class="button" id="openModal1">Quero que você me apresente</button></li>
+                    <li><button class="button" id="openModal2">Quero a versão musical</button></li>
+                </ul>
+
             </div>
         </section>
 
-        <!-- Quem sou eu -->
-        <section id="about" class="wrapper style2">
-            <div class="content">
+        <!-- One -->
+        <section id="one" class="wrapper style2 fade-up inner">
+
+            <div class="content inner">
                 <div class="inner">
-                    <h2>Quem sou eu</h2>
-                    <p>Sempre fui apaixonado por tecnologia. Com 14 anos de experiência em desenvolvimento e engenharia web, já programei em PHP, JavaScript, Java e Golang, e trabalhei com diversos tipos de bancos de dados, tanto relacionais quanto não relacionais.</p>
-                    <p>Contato:<br>
-                    Telefone: 14 9 9653 0908 (Mobile)<br>
-                    Email: <a href="mailto:luizcsfumes@gmail.com">luizcsfumes@gmail.com</a><br>
-                    LinkedIn: <a href="https://www.linkedin.com/in/luizfumes">luizfumes</a>
-                    </p>
+                    <h2>Gshield</h2>
+                    <p><strong>Engenheiro de Software</strong><br>novembro de 2023 - julho de 2024<br>
+                        Contribuindo ativamente para projetos inovadores que elevam a empresa a novos patamares de
+                        excelência tecnológica. Minha atuação abrange o desenvolvimento e otimização de sistemas, com
+                        foco em soluções criativas e eficientes que atendem às demandas dinâmicas do setor de materiais
+                        avançados. Comprometido com a melhoria contínua e a qualidade, estou envolvido em iniciativas
+                        que reforçam nossa posição de liderança, empregando uma variedade de tecnologias e abordagens
+                        para superar desafios e alcançar resultados excepcionais.</p>
+                </div>
+            </div>
+            <div class="content inner">
+                <div class="inner">
+                    <h2>ESCALE</h2>
+                    <p><strong>Data Engineer Manager</strong><br>novembro de 2022 - outubro de 2023<br>
+                        Liderança de equipes de Data Analytics e Data Engineering, desenvolvimento de pipelines, Perl,
+                        arquitetura de software, crescimento profissional da equipe e sempre a busca de impacto de valor
+                        na empresa.</p>
+                    <p><strong>Engineering Manager</strong><br>setembro de 2020 - outubro de 2023<br>
+                        Liderança de equipes de engenharia, coordenação de projetos, arquitetura de software, Go e
+                        Node.js. Foco no crescimento profissional da equipe e no impacto para a empresa.</p>
+                    <p><strong>Tech Lead</strong><br>abril de 2018 - setembro de 2020<br>
+                        Tech Leader com equipe de até 8 pessoas. Metodologia Scrum, OKRs do time, desenvolvimento
+                        backend com MySQL, DynamoDB, MongoDB, PHP, Memcached, RabbitMQ, Microservices, NodeJs, GoLang,
+                        frontend com ReactJS/Redux, Webpack, e DevOps com AWS.</p>
+                </div>
+            </div>
+            <div class="content inner">
+                <div class="inner">
+                    <h2>Global Fashion Group</h2>
+                    <p><strong>Desenvolvedor</strong><br>janeiro de 2016 - abril de 2018<br>
+                        Backend com Zend Framework, Silex Framework, Symfony Framework, MySQL, Solr, Elastic Search,
+                        MongoDB, DynamoDB, Discovery Datajet (Search Engine from Rocket Internet), PHP, Memcached,
+                        RabbitMQ, Scrum, Microservices, NodeJs. Frontend com ReactJS/Redux, Electrode, MongoDB, AWS (S3,
+                        SQS, SNS, Lambda, ApiGateway), Gulp, Webpack.</p>
+                </div>
+            </div>
+            <div class="content inner">
+                <div class="inner">
+                    <h2>Dafiti</h2>
+                    <p><strong>Programador Pleno PHP</strong><br>maio de 2015 - janeiro de 2016<br>
+                        Desenvolvimento com Zend Framework, Silex Framework, Yii framework, MySQL, Solr, Elastic Search,
+                        PHP, Memcached, RabbitMQ, Scrum, Microservices.</p>
+                </div>
+            </div>
+
+            <div class="content inner">
+                <div class="inner">
+                    <h2>JáCotei</h2>
+                    <p><strong>Analista Programador PHP</strong><br>maio de 2013 - maio de 2015<br>
+                        PHP + MySQL, CakePHP Framework, jQuery to JavaScript solutions, participação na implementação da
+                        metodologia Scrum.</p>
+                </div>
+            </div>
+
+            <div class="content inner">
+                <div class="inner">
+                    <h2>Systax</h2>
+                    <p><strong>Analista Programador PHP</strong><br>março de 2013 - maio de 2013<br>
+                        PHP + Microsoft SQL Server, Zend Framework, jQuery to JavaScript solutions.</p>
+                </div>
+            </div>
+
+            <div class="content inner">
+                <div class="inner">
+                    <h2>Freelancer</h2>
+                    <p><strong>Freelancer</strong><br>junho de 2012 - fevereiro de 2013<br>
+                        Desenvolvimento de Sistemas, e-Commerce e implementação de métodos de pagamento, criação de Hot
+                        Sites. PHP + MySQL | Oracle, Zend Framework, jQuery to JavaScript solutions, Smarty PHP.</p>
+                </div>
+            </div>
+
+            <div class="content inner">
+                <div class="inner">
+                    <h2>Catho Online</h2>
+                    <p><strong>Coordenador Técnico</strong><br>janeiro de 2012 - junho de 2012<br>
+                        Arquitetura de informação e usabilidade, equipe trabalhando dentro da metodologia Scrum,
+                        otimização de consultas SQL.</p>
+                    <p><strong>Analista Programador</strong><br>setembro de 2008 - janeiro de 2012<br>
+                        Desenvolvimento de Sistemas, e-Commerce e método de pagamento, arquitetura da informação e
+                        usabilidade, PHP + MySQL, Zend Framework, jQuery to JavaScript solutions, Smarty PHP, otimização
+                        de consultas SQL.</p>
+                </div>
+            </div>
+
+            <div class="content inner">
+                <div class="inner">
+                    <h2>Webtask Websolution</h2>
+                    <p><strong>Co-Owner / Websolution</strong><br>fevereiro de 2007 - setembro de 2008<br>
+                        System Development, e-Commerce, Payment Method and Shipping Methods, PHP + MySQL | Oracle, Zend
+                        Framework, jQuery to JavaScript solutions, Smarty PHP, otimização de consultas SQL.</p>
+                </div>
+            </div>
+
+            <div class="content inner">
+                <div class="inner">
+                    <h2>HelpDesk</h2>
+                    <p><strong>Programmer</strong><br>julho de 2005 - fevereiro de 2007<br>
+                        PHP + MySQL, Smarty PHP, development of websites, payment methods (Visa VBV, Komerci, Amex, Itau
+                        Shopline, etc.), virtual stores (OsCommerce, Magento, custom stores).</p>
                 </div>
             </div>
         </section>
 
-        <!-- Currículo -->
-        <section id="curriculum" class="wrapper style2">
-            <div class="content">
-                <div class="inner">
-                    <h2>Currículo</h2>
-                    <ul>
-                        <li><strong>Gshield</strong> - Engenheiro de Software (novembro de 2023 - julho de 2024)</li>
-                        <li><strong>ESCALE</strong>
-                            <ul>
-                                <li>Data Engineer Manager (novembro de 2022 - outubro de 2023)</li>
-                                <li>Engineering Manager (setembro de 2020 - outubro de 2023)</li>
-                                <li>Tech Lead (abril de 2018 - setembro de 2020)</li>
-                            </ul>
-                        </li>
-                        <li><strong>Global Fashion Group</strong> - Desenvolvedor (janeiro de 2016 - abril de 2018)</li>
-                        <li><strong>Dafiti</strong> - Programador Pleno PHP (maio de 2015 - janeiro de 2016)</li>
-                        <li><strong>JáCotei</strong> - Analista Programador PHP (maio de 2013 - maio de 2015)</li>
-                        <li><strong>Systax</strong> - Analista Programador PHP (março de 3 - maio de 2013)</li>
-                        <li><strong>Freelancer</strong> (junho de 2012 - fevereiro de 2013)</li>
-                        <li><strong>Catho Online</strong> - Coordenador Técnico e Analista Programador (setembro de 2008 - junho de 2012)</li>
-                        <li><strong>Webtask Websolution</strong> - Co-Owner / Websolution (fevereiro de 2007 - setembro de 2008)</li>
-                        <li><strong>HelpDesk</strong> - Programador (julho de 2005 - fevereiro de 2007)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
-        <!-- Formação Acadêmica -->
-        <section id="education" class="wrapper style2">
-            <div class="content">
-                <div class="inner">
-                    <h2>Formação Acadêmica</h2>
-                    <p><strong>UNIP</strong> - Bacharelado em Ciência da Computação (2002 - 2005)</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Principais Competências -->
-        <section id="skills" class="wrapper style2">
-            <div class="content">
-                <div class="inner">
-                    <h2>Principais Competências</h2>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>CI/CD</li>
-                        <li>Desenvolvimento de software</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="wrapper style3 fade-up">
+        <!-- Two -->
+        <section id="two" class="wrapper style3 fullscreen fade-up">
             <div class="inner">
-                <h2>Get in touch</h2>
-                <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+                <h2>Principais Competências</h2>
+                <div class="features">
+                    <section>
+                        <span class="icon solid major fa-code"></span>
+                        <h3>Desenvolvimento de Software</h3>
+                        <p>Experiência com PHP, JavaScript, Java, Golang, bancos de dados relacionais e não relacionais.
+                        </p>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-lock"></span>
+                        <h3>CI/CD e Testes</h3>
+                        <p>Especializado em metodologias ágeis como Scrum, com desafios em CI/CD, testes e
+                            observabilidade.</p>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-cog"></span>
+                        <h3>Node.js e GoLang</h3>
+                        <p>Experiência avançada em desenvolvimento backend com Node.js e GoLang.</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Three -->
+        <section id="three" class="wrapper style1 fullscreen fade-up">
+            <div class="inner">
+                <h2>Contato</h2>
                 <div class="split style1">
                     <section>
                         <form method="post" action="#">
                             <div class="fields">
                                 <div class="field half">
-                                    <label for="name">Name</label>
+                                    <label for="name">Nome</label>
                                     <input type="text" name="name" id="name" />
                                 </div>
                                 <div class="field half">
@@ -195,40 +242,28 @@
                                     <input type="text" name="email" id="email" />
                                 </div>
                                 <div class="field">
-                                    <label for="message">Message</label>
+                                    <label for="message">Mensagem</label>
                                     <textarea name="message" id="message" rows="5"></textarea>
                                 </div>
                             </div>
                             <ul class="actions">
-                                <li><a href="" class="button submit">Send Message</a></li>
+                                <li><a href="" class="button submit">Enviar Mensagem</a></li>
                             </ul>
                         </form>
                     </section>
                     <section>
                         <ul class="contact">
                             <li>
-                                <h3>Address</h3>
-                                <span>12345 Somewhere Road #654<br />
-                                Nashville, TN 00000-0000<br />
-                                USA</span>
-                            </li>
-                            <li>
                                 <h3>Email</h3>
-                                <a href="#">user@untitled.tld</a>
+                                <a href="mailto:luizcsfumes@gmail.com">luizcsfumes@gmail.com</a>
                             </li>
                             <li>
-                                <h3>Phone</h3>
-                                <span>(000) 000-0000</span>
+                                <h3>Telefone</h3>
+                                <span>14 9 9653 0908</span>
                             </li>
                             <li>
-                                <h3>Social</h3>
-                                <ul class="icons">
-                                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                                    <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                                    <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                                </ul>
+                                <h3>LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/luizfumes">luizfumes</a>
                             </li>
                         </ul>
                     </section>
@@ -242,77 +277,80 @@
     <footer id="footer" class="wrapper style1-alt">
         <div class="inner">
             <ul class="menu">
-                <li>&copy; Luiz Fumes. Todos os direitos reservados.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                <li>&copy; Luiz Fumes. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
             </ul>
         </div>
     </footer>
 
-    <!-- Modal para apresentação -->
-    <div id="myModal" class="modal">
+    <!-- Modals para os vídeos -->
+    <div id="videoModal1" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <iframe id="presentationVideo" width="100%" height="100%" src="https://www.youtube.com/embed/O53g5UvuDbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/O53g5UvuDbg" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 
-    <!-- Modal para música -->
-    <div id="singModal" class="modal">
+    <div id="videoModal2" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <iframe id="songVideo" width="100%" height="100%" src="https://www.youtube.com/embed/N5DQmsWCu48" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/N5DQmsWCu48" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
+
+    <div id="modalOverlay" class="modal-overlay"></div>
+
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
     <script>
-        $(document).ready(function() {
-            // Remove a classe is-preload após o carregamento da página
-            $('body').removeClass('is-preload');
+        $(document).ready(function () {
+            function openModal(modalId) {
+                //closeAllModals();
+                $('#modalOverlay').fadeIn();
+                var modal = $('#' + modalId);
+                modal.css('display', 'block').animate({ right: '0' }, 300);
+            }
 
-            // Pega os modais
-            var modal = $("#myModal");
-            var singModal = $("#singModal");
-
-            // Pega os botões que abrem os modais
-            var btn = $("#myBtn");
-            var singBtn = $("#singBtn");
-
-            // Quando o usuário clicar no botão, abre o modal
-            btn.click(function() {
-                modal.show();
-            });
-
-            singBtn.click(function() {
-                singModal.show();
-            });
-
-            // Quando o usuário clicar em <span> (x), fecha o modal e para o vídeo
-            $(".close").click(function() {
-                var modalToClose = $(this).closest(".modal");
-                modalToClose.hide();
-                modalToClose.find("iframe").each(function(){
-                    $(this).attr("src", $(this).attr("src"));
+            function closeModal(modalId) {
+                var modal = $('#' + modalId);
+                modal.animate({ right: '-30%' }, 300, function () {
+                    $(this).css('display', 'none');
+                    $(this).find('iframe').attr('src', $(this).find('iframe').attr('src')); // Reinicia o vídeo
                 });
+                $('#modalOverlay').fadeOut();
+            }
+
+            function closeAllModals() {
+                $('.modal').each(function () {
+                    $(this).animate({ right: '-30%' }, 300, function () {
+                        $(this).css('display', 'none');
+                        $(this).find('iframe').attr('src', $(this).find('iframe').attr('src')); // Reinicia o vídeo
+                    });
+                });
+                $('#modalOverlay').fadeOut();
+            }
+
+            $('#openModal1').on('click', function () {
+                openModal('videoModal1');
             });
 
-            // Quando o usuário clicar fora do modal, fecha o modal e para o vídeo
-            $(window).click(function(event) {
-                if ($(event.target).is(modal)) {
-                    modal.hide();
-                    modal.find("iframe").each(function(){
-                        $(this).attr("src", $(this).attr("src"));
-                    });
-                }
-                if ($(event.target).is(singModal)) {
-                    singModal.hide();
-                    singModal.find("iframe").each(function(){
-                        $(this).attr("src", $(this).attr("src"));
-                    });
-                }
+            $('#openModal2').on('click', function () {
+                openModal('videoModal2');
+            });
+
+            $('.close, #modalOverlay').on('click', function () {
+                closeAllModals();
             });
         });
     </script>
 
 </body>
+
 </html>
