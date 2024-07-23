@@ -9,16 +9,18 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
         }
         .content {
             padding: 20px;
-            background-color: #f0f0f0;
-            margin-bottom: 20px;
+            background-color: #fff;
+            margin: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         h2 {
-            color: #333;
+            color: #007bff;
             border-bottom: 2px solid #ddd;
             padding-bottom: 10px;
         }
@@ -29,6 +31,19 @@
         ul {
             list-style-type: disc;
             padding-left: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -58,8 +73,8 @@
             <div class="inner">
                 <h1>Luiz Fumes</h1>
                 <p>Engenheiro de Software | Coordenador de Engenharia</p>
-                <button id="myBtn">Quero que você me apresente</button>
-                <button id="singBtn">Quero que você cante seu currículo</button>
+                <a href="#" id="myBtn" class="button">Quero que você me apresente</a>
+                <a href="#" id="singBtn" class="button">Quero que você cante seu currículo</a>
             </div>
         </section>
 
