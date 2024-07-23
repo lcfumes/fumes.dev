@@ -7,49 +7,28 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        /* Estilos inline básicos */
         body {
             font-family: Arial, sans-serif;
         }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            right: 0;
-            top: 0;
-            height: 70%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
+        .content {
+            padding: 20px;
+            background-color: #f0f0f0;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .modal-content {
-            background-color: #333;
-            position: fixed;
-            right: 0;
-            height: 60%;
-            aspect-ratio: 9 / 16;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            animation: slide-in-right 0.5s forwards;
-            color: white;
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
         }
-        .close {
-            color: white;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
+        p, ul {
+            color: #555;
+            line-height: 1.6;
         }
-        .close:hover,
-        .close:focus {
-            color: #aaa;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        @keyframes slide-in-right {
-            from {
-                transform: translateX(100%);
-            }
-            to {
-                transform: translateX(0);
-            }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -79,87 +58,75 @@
             <div class="inner">
                 <h1>Luiz Fumes</h1>
                 <p>Engenheiro de Software | Coordenador de Engenharia</p>
-                <button id="myBtn" style="color: #fff; background-color: #000;">Quero que você me apresente</button>
-                <button id="singBtn" style="color: #fff; background-color: #000;">Quero que você cante seu currículo</button>
+                <button id="myBtn">Quero que você me apresente</button>
+                <button id="singBtn">Quero que você cante seu currículo</button>
             </div>
         </section>
 
         <!-- Quem sou eu -->
-        <section id="about" class="wrapper style2 spotlights">
-            <section>
-                <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
-                <div class="content">
-                    <div class="inner">
-                        <h2>Quem sou eu</h2>
-                        <p>Sempre fui apaixonado por tecnologia. Com 14 anos de experiência em desenvolvimento e engenharia web, já programei em PHP, JavaScript, Java e Golang, e trabalhei com diversos tipos de bancos de dados, tanto relacionais quanto não relacionais.</p>
-                        <p>Contato:<br>
-                        Telefone: 14 9 9653 0908 (Mobile)<br>
-                        Email: <a href="mailto:luizcsfumes@gmail.com">luizcsfumes@gmail.com</a><br>
-                        LinkedIn: <a href="https://www.linkedin.com/in/luizfumes">luizfumes</a>
-                        </p>
-                    </div>
+        <section id="about" class="wrapper style2">
+            <div class="content">
+                <div class="inner">
+                    <h2>Quem sou eu</h2>
+                    <p>Sempre fui apaixonado por tecnologia. Com 14 anos de experiência em desenvolvimento e engenharia web, já programei em PHP, JavaScript, Java e Golang, e trabalhei com diversos tipos de bancos de dados, tanto relacionais quanto não relacionais.</p>
+                    <p>Contato:<br>
+                    Telefone: 14 9 9653 0908 (Mobile)<br>
+                    Email: <a href="mailto:luizcsfumes@gmail.com">luizcsfumes@gmail.com</a><br>
+                    LinkedIn: <a href="https://www.linkedin.com/in/luizfumes">luizfumes</a>
+                    </p>
                 </div>
-            </section>
+            </div>
         </section>
 
         <!-- Currículo -->
-        <section id="curriculum" class="wrapper style2 spotlights">
-            <section>
-                <a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
-                <div class="content">
-                    <div class="inner">
-                        <h2>Currículo</h2>
-                        <ul>
-                            <li><strong>Gshield</strong> - Engenheiro de Software (novembro de 2023 - julho de 2024)</li>
-                            <li><strong>ESCALE</strong>
-                                <ul>
-                                    <li>Data Engineer Manager (novembro de 2022 - outubro de 2023)</li>
-                                    <li>Engineering Manager (setembro de 2020 - outubro de 2023)</li>
-                                    <li>Tech Lead (abril de 2018 - setembro de 2020)</li>
-                                </ul>
-                            </li>
-                            <li><strong>Global Fashion Group</strong> - Desenvolvedor (janeiro de 2016 - abril de 2018)</li>
-                            <li><strong>Dafiti</strong> - Programador Pleno PHP (maio de 2015 - janeiro de 2016)</li>
-                            <li><strong>JáCotei</strong> - Analista Programador PHP (maio de 2013 - maio de 2015)</li>
-                            <li><strong>Systax</strong> - Analista Programador PHP (março de 2013 - maio de 2013)</li>
-                            <li><strong>Freelancer</strong> (junho de 2012 - fevereiro de 2013)</li>
-                            <li><strong>Catho Online</strong> - Coordenador Técnico e Analista Programador (setembro de 2008 - junho de 2012)</li>
-                            <li><strong>Webtask Websolution</strong> - Co-Owner / Websolution (fevereiro de 2007 - setembro de 2008)</li>
-                            <li><strong>HelpDesk</strong> - Programador (julho de 2005 - fevereiro de 2007)</li>
-                        </ul>
-                    </div>
+        <section id="curriculum" class="wrapper style2">
+            <div class="content">
+                <div class="inner">
+                    <h2>Currículo</h2>
+                    <ul>
+                        <li><strong>Gshield</strong> - Engenheiro de Software (novembro de 2023 - julho de 2024)</li>
+                        <li><strong>ESCALE</strong>
+                            <ul>
+                                <li>Data Engineer Manager (novembro de 2022 - outubro de 2023)</li>
+                                <li>Engineering Manager (setembro de 2020 - outubro de 2023)</li>
+                                <li>Tech Lead (abril de 2018 - setembro de 2020)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Global Fashion Group</strong> - Desenvolvedor (janeiro de 2016 - abril de 2018)</li>
+                        <li><strong>Dafiti</strong> - Programador Pleno PHP (maio de 2015 - janeiro de 2016)</li>
+                        <li><strong>JáCotei</strong> - Analista Programador PHP (maio de 2013 - maio de 2015)</li>
+                        <li><strong>Systax</strong> - Analista Programador PHP (março de 2013 - maio de 2013)</li>
+                        <li><strong>Freelancer</strong> (junho de 2012 - fevereiro de 2013)</li>
+                        <li><strong>Catho Online</strong> - Coordenador Técnico e Analista Programador (setembro de 2008 - junho de 2012)</li>
+                        <li><strong>Webtask Websolution</strong> - Co-Owner / Websolution (fevereiro de 2007 - setembro de 2008)</li>
+                        <li><strong>HelpDesk</strong> - Programador (julho de 2005 - fevereiro de 2007)</li>
+                    </ul>
                 </div>
-            </section>
+            </div>
         </section>
 
         <!-- Formação Acadêmica -->
-        <section id="education" class="wrapper style2 spotlights">
-            <section>
-                <a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="center center" /></a>
-                <div class="content">
-                    <div class="inner">
-                        <h2>Formação Acadêmica</h2>
-                        <p><strong>UNIP</strong> - Bacharelado em Ciência da Computação (2002 - 2005)</p>
-                    </div>
+        <section id="education" class="wrapper style2">
+            <div class="content">
+                <div class="inner">
+                    <h2>Formação Acadêmica</h2>
+                    <p><strong>UNIP</strong> - Bacharelado em Ciência da Computação (2002 - 2005)</p>
                 </div>
-            </section>
+            </div>
         </section>
 
         <!-- Principais Competências -->
-        <section id="skills" class="wrapper style2 spotlights">
-            <section>
-                <a href="#" class="image"><img src="images/pic04.jpg" alt="" data-position="center center" /></a>
-                <div class="content">
-                    <div class="inner">
-                        <h2>Principais Competências</h2>
-                        <ul>
-                            <li>Node.js</li>
-                            <li>CI/CD</li>
-                            <li>Desenvolvimento de software</li>
-                        </ul>
-                    </div>
+        <section id="skills" class="wrapper style2">
+            <div class="content">
+                <div class="inner">
+                    <h2>Principais Competências</h2>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>CI/CD</li>
+                        <li>Desenvolvimento de software</li>
+                    </ul>
                 </div>
-            </section>
+            </div>
         </section>
 
         <!-- Contact -->
@@ -236,7 +203,7 @@
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/O53g5UvuDbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="presentationVideo" width="100%" height="100%" src="https://www.youtube.com/embed/O53g5UvuDbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -244,7 +211,7 @@
     <div id="singModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/N5DQmsWCu48" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="songVideo" width="100%" height="100%" src="https://www.youtube.com/embed/N5DQmsWCu48" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -276,18 +243,24 @@
             $(".close").click(function() {
                 var modalToClose = $(this).closest(".modal");
                 modalToClose.hide();
-                modalToClose.find("iframe").attr("src", modalToClose.find("iframe").attr("src"));
+                modalToClose.find("iframe").each(function(){
+                    $(this).attr("src", $(this).attr("src"));
+                });
             });
 
             // Quando o usuário clicar fora do modal, fecha o modal e para o vídeo
             $(window).click(function(event) {
                 if ($(event.target).is(modal)) {
                     modal.hide();
-                    modal.find("iframe").attr("src", modal.find("iframe").attr("src"));
+                    modal.find("iframe").each(function(){
+                        $(this).attr("src", $(this).attr("src"));
+                    });
                 }
                 if ($(event.target).is(singModal)) {
                     singModal.hide();
-                    singModal.find("iframe").attr("src", singModal.find("iframe").attr("src"));
+                    singModal.find("iframe").each(function(){
+                        $(this).attr("src", $(this).attr("src"));
+                    });
                 }
             });
         });
